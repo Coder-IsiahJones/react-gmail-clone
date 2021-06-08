@@ -5,6 +5,8 @@ import "./SendMail.css"
 import { useForm } from "react-hook-form"
 import { useDispatch } from "react-redux"
 import { closeSendMessage } from "../features/mailSlice"
+import { db } from "../firebase"
+import firebase from "firebase"
 
 const SendMail = () => {
   const {
@@ -16,6 +18,14 @@ const SendMail = () => {
 
   const onSubmit = (formData) => {
     console.log(formData)
+    db.collection("emails").add({
+      to: formData.to,
+      subject: formData.subject,
+      message: formData.message,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+    })
+
+    dispatch(closeSendMessage())
   }
 
   const dispatch = useDispatch()
