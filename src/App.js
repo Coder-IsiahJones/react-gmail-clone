@@ -3,6 +3,8 @@ import "./App.css"
 import Header from "./components/Header"
 import Sidebar from "./components/Sidebar"
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
+import Mail from "./components/Mail"
+import EmailList from "./components/EmailList"
 
 function App() {
   return (
