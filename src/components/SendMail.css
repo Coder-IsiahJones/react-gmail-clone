@@ -3,9 +3,10 @@
   bottom: 0;
   right: 50px;
   background-color: #404040;
-  width: 40%;
-  height: 40%;
-  max-width: 500px;
+  width: 44%;
+  height: 45%;
+  max-width: 610px;
+  min-width: 510px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   display: flex;
@@ -30,7 +31,15 @@
 .sendMail-send {
   background-color: #3079ed !important;
   text-transform: capitalize !important;
-  margin: 15px !important;
+  margin-left: 15px !important;
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
+}
+
+.sendMail-carrot {
+  background-color: #3079ed !important;
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
 }
 
 .sendMail-close {
@@ -60,4 +69,25 @@
 
 .sendMail-message {
   flex: 1;
+  position: relative;
+  top: 0;
+}
+
+.sendMail-options {
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+.sendMail-Icons {
+  display: flex;
+}
+@media only screen and (max-width: 580px) {
+  .sendMail {
+    right: 25px;
+  }
+}
+
+.carrot {
+  width: 18px !important;
 }
